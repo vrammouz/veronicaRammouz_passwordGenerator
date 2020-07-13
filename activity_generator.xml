@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.veronica.passwordgenerator.GeneratorActivity"
+    android:id="@+id/generator_layout">
+
+    <TextView
+        android:id="@+id/generator_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password strength:"
+        android:textSize="16sp"
+        android:textColor="#000"/>
+
+    <SeekBar
+        android:id="@+id/chosen_strength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generator_text"
+        android:layout_marginTop="170dp"
+        android:background="@color/colorAccent"
+        android:max="3"/>
+<!--labels for respective strengths-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/chosen_strength">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Weak"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Medium"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Strong"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/does_exist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note: A saved password already exists"
+        android:layout_above="@+id/generate"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="Generate new password"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:onClick="generatePassword"/>
+
+</RelativeLayout>

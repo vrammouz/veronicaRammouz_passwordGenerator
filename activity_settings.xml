@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.veronica.passwordgenerator.SettingsActivity"
+    android:id="@+id/settings_activity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textColor="#000"
+        android:textSize="32sp"/>
+
+    <TextView
+        android:id="@+id/color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:text="App background color:"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/random_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/color"
+        android:background="@color/white"
+        android:text="Random"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:tag="0"
+        android:onClick="toggleTheme"/>
+
+    <Button
+        android:id="@+id/darcula_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/random_button"
+        android:background="@color/white"
+        android:text="Darcula"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:tag="1"
+        android:onClick="toggleTheme"/>
+    <Button
+        android:id="@+id/light_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/darcula_button"
+        android:background="@color/white"
+        android:text="Light (Default)"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:tag="2"
+        android:onClick="toggleTheme"/>
+    <Button
+        android:id="@+id/color_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/light_button"
+        android:background="@color/white"
+        android:text="Colored"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:tag="3"
+        android:onClick="toggleTheme"/>
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password(s)"
+        android:textColor="#000"
+        android:layout_below="@+id/color_button"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"/>
+
+    <ListView
+        android:id="@+id/password_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title2">
+
+    </ListView>
+    <TextView
+        android:id="@+id/password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title2"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        tools:text="password"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:onClick="back"/>
+
+</RelativeLayout>
